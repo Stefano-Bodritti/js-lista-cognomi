@@ -16,3 +16,10 @@ nuovoCognome = nuovoCognome[0].toUpperCase() + nuovoCognome.slice(1).toLowerCase
 cognomi.push(nuovoCognome);
 cognomi.sort();
 console.log(cognomi);
+
+// 5. stampo lista ordinata
+for (var i = 0; i < cognomi.length; i++) {
+  document.getElementById('lista').innerHTML += "<li>" + cognomi[i] + "</li>";
+}
+
+// 6. trovo e stampo posizione utente nella lista
