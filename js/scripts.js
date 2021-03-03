@@ -23,3 +23,5 @@ for (var i = 0; i < cognomi.length; i++) {
 }
 
 // 6. trovo e stampo posizione utente nella lista
+var posizioneUtente = cognomi.indexOf(nuovoCognome) + 1;
+document.getElementById('ordine').innerHTML = "Il cognome " + nuovoCognome + " si trova in " + posizioneUtente + "° posizione nella lista";
