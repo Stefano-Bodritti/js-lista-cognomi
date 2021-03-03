@@ -6,7 +6,13 @@ scrivi anche la posizione "umana" della lista in cui il nuovo utente si trova */
 // 1. creo array di cognomi
 var cognomi = ["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
 
-// 2. inserisco il cognome dell'utente
-cognomi.push(prompt("Inserisci il tuo cognome"));
+// 2. chiedo il cognome all'utente
+var nuovoCognome = prompt("Inserisci il tuo cognome");
 
+// 3. rendo la prima lettera maiuscola
+nuovoCognome = nuovoCognome[0].toUpperCase() + nuovoCognome.slice(1).toLowerCase();
+
+// 4. inserisco il cognome dell'utente in lista e la ordino
+cognomi.push(nuovoCognome);
+cognomi.sort();
 console.log(cognomi);
