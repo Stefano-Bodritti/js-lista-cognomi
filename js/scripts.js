@@ -23,5 +23,17 @@ for (var i = 0; i < cognomi.length; i++) {
 }
 
 // 6. trovo e stampo posizione utente nella lista
-var posizioneUtente = cognomi.indexOf(nuovoCognome) + 1;
+// var posizioneUtente = cognomi.indexOf(nuovoCognome) + 1;
+// document.getElementById('ordine').innerHTML = "Il cognome " + nuovoCognome + " si trova in " + posizioneUtente + "° posizione nella lista";
+
+// provo con ciclo while
+var cerco = true;
+var i = 0;
+do {
+  if (nuovoCognome == cognomi[i]) {
+    var posizioneUtente = i + 1;
+    cerco = false;
+  }
+  i++;
+} while (cerco);
 document.getElementById('ordine').innerHTML = "Il cognome " + nuovoCognome + " si trova in " + posizioneUtente + "° posizione nella lista";
